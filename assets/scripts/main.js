@@ -3,6 +3,7 @@
 // TODO
 
 
+
 // Input field that serves as the textual indicator of sound level
 var textInput = document.getElementById("volume-number");
 var slider = document.getElementById("volume-slider");
@@ -47,3 +48,38 @@ function soundLevel(val) {
     }
 
 };
+
+
+//Radio that switches between different horn sounds
+var soundImage = document.getElementById("sound-image");
+var airHorn = document.getElementById("radio-air-horn");
+var carHorn = document.getElementById("radio-car-horn");
+var partyHorn = document.getElementById("radio-party-horn");
+var horn_sound = document.getElementById("horn-sound");
+
+
+airHorn.onclick = function () {
+    soundImage.src = "./assets/media/images/air-horn.svg";
+    horn_sound.src = "./assets/media/audio/air-horn.mp3";
+};
+
+carHorn.onclick = function () {
+    soundImage.src = "./assets/media/images/car.svg";
+    horn_sound.src = "./assets/media/audio/car-horn.mp3";
+};
+
+partyHorn.onclick = function () {
+    soundImage.src = "./assets/media/images/party-horn.svg";
+    horn_sound.src = "./assets/media/audio/party-horn.mp3";
+};
+
+//Button that plays the horn sound
+
+honkButton.onclick = function (event) {
+    event.preventDefault();
+    horn_sound.volume = document.getElementById("volume-number").value / 100;
+    horn_sound.play();
+
+}
+
+
