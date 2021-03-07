@@ -2,4 +2,6 @@
 
 Hang Wang
 
-https://github.com/ericwang994/Lab5_PartyHorn
+Sorry, forgot to publish github page!!!
+
+https://ericwang994.github.io/Lab5_PartyHorn/
